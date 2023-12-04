@@ -83,6 +83,8 @@ if __name__ == "__main__":
     """Output files."""
     file_AUCs = 'output/result/AUCs--lr=1e-4,dropout=0.1,weight_decay=1e-4,kernel=7,n_layer=3,batch=64'+ '.txt'
     file_model = 'output/model/' + 'lr=1e-4,dropout=0.1,weight_decay=1e-4,kernel=7,n_layer=3,batch=64'
+    os.makedirs('output/result/', exist_ok=True)
+    os.makedirs('output/model/', exist_ok=True)
     AUCs = ('Epoch\tTime(sec)\tLoss_train\tAUC_dev\tPRC_dev')
     with open(file_AUCs, 'w') as f:
         f.write(AUCs + '\n')
