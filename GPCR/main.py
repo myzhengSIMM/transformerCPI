@@ -15,7 +15,7 @@ import timeit
 
 
 def load_tensor(file_name, dtype):
-    return [dtype(d).to(device) for d in np.load(file_name + '.npy')]
+    return [dtype(d).to(device) for d in np.load(file_name + '.npy', allow_pickle=True)]
 
 
 def shuffle_dataset(dataset, seed):
